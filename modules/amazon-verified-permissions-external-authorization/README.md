@@ -1,4 +1,6 @@
 # Amazon Verified Permissions Authorization
+This is a demo Lambda function invoking Amazon Verified Permissions. The Lambda function can be invoked by the aws command line tool. 
+
 This document provides instructions on how to deploy and manage the extension authorization (ext-authz) Lambda function using Amazon Web Services (AWS), Docker, and Kubernetes. Please follow these steps carefully to ensure successful deployment.
 Prerequisites
 
