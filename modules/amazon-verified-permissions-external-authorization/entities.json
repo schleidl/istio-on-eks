@@ -1,0 +1,265 @@
+{
+        "entityList": [
+            {
+                "identifier": {
+                    "entityType": "User",
+                    "entityId": "alice"
+                },
+                "parents": [],
+                "attributes": {}
+            },
+            {
+                "identifier": {
+                    "entityType": "User",
+                    "entityId": "bob"
+                },
+                "parents": [],
+                "attributes": {}
+            },
+            {
+                "identifier": {
+                    "entityType": "User",
+                    "entityId": "charlie"
+                },
+                "parents": [],
+                "attributes": {}
+            },
+            {
+                "identifier": {
+                    "entityType": "List",
+                    "entityId": "LIST#000001"
+                },
+                "parents": [],
+                "attributes": {
+                    "listId": {
+                        "long": 1
+                    },
+                    "description": {
+                        "string": "Alice's daily tasks"
+                    },
+                    "name": {
+                        "string": "Alice's list"
+                    },
+                    "nextTaskId": {
+                        "long": 3
+                    },
+                    "owner": {
+                        "entityIdentifier": {
+                            "entityType": "User",
+                            "entityId": "alice"
+                        }
+                    }
+                }
+            },
+            {
+                "identifier": {
+                    "entityType": "List",
+                    "entityId": "LIST#000002"
+                },
+                "parents": [],
+                "attributes": {
+                    "listId": {
+                        "long": 2
+                    },
+                    "description": {
+                        "string": "Bob's most important tasks"
+                    },
+                    "name": {
+                        "string": "Bob's tasks"
+                    },
+                    "nextTaskId": {
+                        "long": 3
+                    },
+                    "owner": {
+                        "entityIdentifier": {
+                            "entityType": "User",
+                            "entityId": "bob"
+                        }
+                    }
+                }
+            },
+            {
+                "identifier": {
+                    "entityType": "List",
+                    "entityId": "LIST#000003"
+                },
+                "parents": [],
+                "attributes": {
+                    "listId": {
+                        "long": 3
+                    },
+                    "description": {
+                        "string": "Charlie's daily tasks"
+                    },
+                    "name": {
+                        "string": "Charlie's tasks"
+                    },
+                    "nextTaskId": {
+                        "long": 3
+                    },
+                    "owner": {
+                        "entityIdentifier": {
+                            "entityType": "User",
+                            "entityId": "charlie"
+                        }
+                    }
+                }
+            },
+            {
+                "identifier": {
+                    "entityType": "Task",
+                    "entityId": "TASK#000001"
+                },
+                "parents": [
+                    {
+                        "entityType": "List",
+                        "entityId": "LIST#000001"
+                    }
+                ],
+                "attributes": {
+                    "listId": {
+                        "long": 1
+                    },
+                    "description": {
+                        "string": "Read emails in the morning"
+                    },
+                    "name": {
+                        "string": "Read emails"
+                    },
+                    "taskId": {
+                        "long": 1
+                    }
+                }
+            },
+            {
+                "identifier": {
+                    "entityType": "Task",
+                    "entityId": "TASK#000002"
+                },
+                "parents": [
+                    {
+                        "entityType": "List",
+                        "entityId": "LIST#000001"
+                    }
+                ],
+                "attributes": {
+                    "listId": {
+                        "long": 1
+                    },
+                    "description": {
+                        "string": "Send a daily report to the team at 5pm"
+                    },
+                    "name": {
+                        "string": "Send a daily report to the team"
+                    },
+                    "taskId": {
+                        "long": 2
+                    }
+                }
+            },
+            {
+                "identifier": {
+                    "entityType": "Task",
+                    "entityId": "TASK#000001"
+                },
+                "parents": [
+                    {
+                        "entityType": "List",
+                        "entityId": "LIST#000002"
+                    }
+                ],
+                "attributes": {
+                    "listId": {
+                        "long": 2
+                    },
+                    "description": {
+                        "string": "Attend the daily standup meeting at 9am"
+                    },
+                    "name": {
+                        "string": "Attend the daily standup meeting"
+                    },
+                    "taskId": {
+                        "long": 1
+                    }
+                }
+            },
+            {
+                "identifier": {
+                    "entityType": "Task",
+                    "entityId": "TASK#000002"
+                },
+                "parents": [
+                    {
+                        "entityType": "List",
+                        "entityId": "LIST#000002"
+                    }
+                ],
+                "attributes": {
+                    "listId": {
+                        "long": 2
+                    },
+                    "description": {
+                        "string": "Complete the time journal at 5pm"
+                    },
+                    "name": {
+                        "string": "Complete the time journal"
+                    },
+                    "taskId": {
+                        "long": 2
+                    }
+                }
+            },
+            {
+                "identifier": {
+                    "entityType": "Task",
+                    "entityId": "TASK#000001"
+                },
+                "parents": [
+                    {
+                        "entityType": "List",
+                        "entityId": "LIST#000003"
+                    }
+                ],
+                "attributes": {
+                    "listId": {
+                        "long": 3
+                    },
+                    "description": {
+                        "string": "Review new pull requests at 10am"
+                    },
+                    "name": {
+                        "string": "Review new pull requests"
+                    },
+                    "taskId": {
+                        "long": 1
+                    }
+                }
+            },
+            {
+                "identifier": {
+                    "entityType": "Task",
+                    "entityId": "TASK#000002"
+                },
+                "parents": [
+                    {
+                        "entityType": "List",
+                        "entityId": "LIST#000003"
+                    }
+                ],
+                "attributes": {
+                    "listId": {
+                        "long": 3
+                    },
+                    "description": {
+                        "string": "Check the team's KPIs at 5pm"
+                    },
+                    "name": {
+                        "string": "Check the team's KPIs"
+                    },
+                    "taskId": {
+                        "long": 2
+                    }
+                }
+            }
+        ]
+    }
