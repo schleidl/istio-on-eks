@@ -47,6 +47,20 @@ Deploy your Lambda function using the Docker image.
 
 Note: Ensure the CPU architecture (ARM vs. x86) is compatible with your Lambda function requirements.
 
+# Create API Gateway
+    aws apigatewayv2 create-api --name 'verified-permissions-api' --protocol-type 'HTTP' --target arn:aws:lambda:us-east-1:851725369072:function:extauthz
+
+    aws apigatewayv2 create-integration --api-id q3u74hcvxh --integration-type AWS_PROXY --integration-uri arn:aws:lambda:us-east-1:851725369072:function:extauthz --payload-format-version 2.0
+
+    aws apigatewayv2 create-route --api-id q3u74hcvxh --route-key 'ANY /' --target integrations/66plr05
+
+    aws apigatewayv2 create-deployment --api-id q3u74hcvxh --description 'verified permissions api deployment'
+
+    Run permission command generated in API Gateway console. See screenshot api-gateway-lambda-integration.jpg
+
+    aws lambda add-permission --function-name extauthz --action lambda:InvokeFunction --principal apigateway.amazonaws.com --source-arn arn:aws:execute-api:us-east-1:851725369072:q3u74hcvxh/ --statement-id 1
+
+
 # Test Lambda Function
 aws lambda invoke --function-name extauthz --payload file://entities.json response.json
 
